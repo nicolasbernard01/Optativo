@@ -1,0 +1,37 @@
+{% extends 'cursosapp/base.html' %} 
+{% load static %}
+
+{% block contenido %}
+
+<br>
+<br>
+<br>
+<br>
+
+{% for evento in eventos %}
+ <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 mb-4" >
+        <div class="card" style="width: 40rem;">
+            <div class="card-body shadow p-3">
+              <h5 class="card-title">{{ evento.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{evento.city}} <br> Horario: {{ evento.date }}</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link" style="text-decoration: none;">Reservar mi lugar</a>
+              <a href="#" class="card-link" style="text-decoration: none;">Compartir</a>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'cursosapp/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+{% for curso in cursos %}
+
+<br>
+<div class="container" >
+    <div class="row-2 d-flex justify-content-center">
+      <div class="col-6">
+        <ul class="list-group shadow p-3 mb-5 bg-body rounded">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-4 me-auto">
+                <div class="fw-bold">{{curso.name}}</div>
+               Dictado por:  {{curso.profesor}}
+            </div>
+            <button type="button" class="btn btn-primary btn-md shadow p-2  " >Comprar ${{ curso.price }}</button>
+             
+            </li>
+         </ul>
+    </div>
+  </div>
+</div>
+ <br>
+
+{% endfor %}
+
+{% endblock %}

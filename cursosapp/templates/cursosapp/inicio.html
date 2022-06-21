@@ -1,0 +1,63 @@
+{% extends 'cursosapp/base.html' %}
+{% load static %}
+
+<br>
+<br>
+
+{% block contenido %}
+<br>
+<br>
+
+<div class="container-fluid" style="text-align: center;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<h1 style="font-family: 'Oswald', sans-serif;" >
+						Bienvenido, tu futuro te espera...
+					</h1>
+					<p style="font-family: Kdam Thmor Pro, sans-serif;">
+                        <br>
+						Desarróllate En El Área De La Tecnologia Y Maximiza Tus Saberes Con Los Cursos Más Completos. Incrementa Tus Capacidades Y Habilidades Junto Con Los Mejores Profesionales. Aprende desde cero. Aprende a tu ritmo. Certificados digitales.
+
+					</p>
+                    <br>
+                    <br>
+                    <h1 style="font-family: Kdam Thmor Pro, sans-serif;"  >Descuentos semanales</h1>
+
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<br>
+<br>
+{% for curso in cursos %}
+
+<div class="container-fluid justify-content-center  ">
+    <div class="row justify-content-center">
+      <div class="col-md-4 ">
+        <ol class="list-group ">
+            <li class="list-group-item d-flex justify-content-center align-items-start shadow-lg p-3 mb-5 bg-body rounded">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">{{curso.name}}</div>
+                {{curso.profesor}}
+              </div>
+              <span class="badge bg-primary rounded-pill">${{curso.price}}</span>
+          </li>
+      </div>
+    </div>
+  </div>
+ 
+  <br>
+  <br>
+  
+
+  {% endfor %}
+{% endblock %}
